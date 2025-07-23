@@ -30,15 +30,15 @@ module "vpc" {
 }
 
 # EC2 instance nằm trong VPC mới
-# resource "aws_instance" "app_server" {
-#   ami           = data.aws_ami.ubuntu.id
-#   instance_type = var.instance_type
-#
-#   # Tham chiếu VPC
-#   vpc_security_group_ids = [module.vpc.default_security_group_id]
-#   subnet_id              = module.vpc.private_subnets[0]
-#
-#   tags = {
-#     Name = var.instance_name
-#   }
-# }
+resource "aws_instance" "app_server" {
+  ami           = data.aws_ami.ubuntu.id
+  instance_type = var.instance_type
+
+  # Tham chiếu VPC
+  vpc_security_group_ids = [module.vpc.default_security_group_id]
+  subnet_id              = module.vpc.private_subnets[0]
+
+  tags = {
+    Name = var.instance_name
+  }
+}

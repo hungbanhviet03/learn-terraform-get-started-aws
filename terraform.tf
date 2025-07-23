@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "nkao1"
+    organization = "hungbanhviet03--learning"
 
     workspaces {
       project = "Learn Terraform"

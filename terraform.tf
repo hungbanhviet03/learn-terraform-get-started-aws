@@ -1,12 +1,12 @@
 terraform {
-  cloud {
-    organization = "hungbanhviet03--learning"
-
-    workspaces {
-      project = "Learn Terraform"
-      name = "learn-terraform-aws-get-started"
-    }
-  }
+  # cloud {
+  #   organization = "hungbanhviet03--learning"
+  #
+  #   workspaces {
+  #     project = "Learn Terraform"
+  #     name = "learn-terraform-aws-get-started"
+  #   }
+  # }
 
   required_providers {
     aws = {
